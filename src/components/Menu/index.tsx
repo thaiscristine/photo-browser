@@ -10,7 +10,7 @@ const Menu: React.FC = () => {
       <Link to="/">
         <FiImage size={30} />
       </Link>
-      <Link to="/">
+      <Link to="/profile/1">
         <FiUser size={30} />
       </Link>
     </Container>
