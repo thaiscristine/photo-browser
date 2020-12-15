@@ -7,7 +7,7 @@ import { Container } from './styles';
 const Menu: React.FC = () => {
   return (
     <Container>
-      <Link to="/dashboard">
+      <Link to="/">
         <FiImage size={30} />
       </Link>
       <Link to="/profile/1">
