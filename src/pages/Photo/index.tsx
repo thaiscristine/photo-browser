@@ -69,7 +69,7 @@ const Photo: React.FC = () => {
           <AlbumsGrid>
             <img src={photo?.url} alt="" />
           </AlbumsGrid>
-          {/* {id !== Number(state?.albumId) && (
+          {/* {id <== Number(state?.albumId) && (
             <Link to={`/photo/${id + 1}`}>
               <FiChevronRight />
               teste

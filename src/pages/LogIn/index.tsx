@@ -1,16 +1,16 @@
-import React, { useCallback, useRef } from 'react';
+import React from 'react'; // , { useCallback, useRef }
 
-import { FormHandles } from '@unform/core';
-import { Form } from '@unform/web';
+// import { FormHandles } from '@unform/core';
+// import { Form } from '@unform/web';
 
-import { FiMail } from 'react-icons/fi';
-import { useHistory } from 'react-router-dom';
+// import { FiMail } from 'react-icons/fi';
+// import { useHistory } from 'react-router-dom';
 
-import { useAuth } from '../../hooks/AuthContext';
+// import { useAuth } from '../../hooks/AuthContext';
 import { Container, LogInContainer } from './styles';
 
-import Button from '../../components/Button';
-import Input from '../../components/Input';
+// import Button from '../../components/Button';
+// import Input from '../../components/Input';
 import Header from '../../components/Header';
 
 interface SignInFormData {
@@ -18,33 +18,34 @@ interface SignInFormData {
 }
 
 const LogIn: React.FC = () => {
-  const formRef = useRef<FormHandles>(null);
-  const { signIn } = useAuth();
-  const history = useHistory();
+  // const formRef = useRef<FormHandles>(null);
+  // const { signIn } = useAuth();
+  // const history = useHistory();
 
-  const handleSubmit = useCallback(
-    async (data: SignInFormData) => {
-      try {
-        await signIn({
-          email: data.email,
-        });
-        history.push('/dashboard');
-      } catch (err) {
-        history.push('/');
-      }
-    },
-    [history, signIn],
-  );
+  // const handleSubmit = useCallback(
+  //   async (data: SignInFormData) => {
+  //     try {
+  //       await signIn({
+  //         email: data.email,
+  //       });
+
+  //       history.push('/dashboard');
+  //     } catch (err) {
+  //       history.push('/');
+  //     }
+  //   },
+  //   [history, signIn],
+  // );
 
   return (
     <>
       <Container>
         <LogInContainer>
           <Header title="LogIn" firstPage />
-          <Form ref={formRef} onSubmit={handleSubmit}>
+          {/* <Form ref={formRef} onSubmit={handleSubmit}>
             <Input icon={FiMail} name="email" placeholder="E-mail" />
             <Button type="submit">LogIn</Button>
-          </Form>
+          </Form> */}
         </LogInContainer>
       </Container>
     </>
